@@ -1,0 +1,8 @@
+ul li{list-style:none;}
+ul{padding:0px 2px ;}
+.btn_start{width: 200px;padding: 10px 0px;font-weight: bold;color: #6d1303;}
+.finish{text-align: center;font-size: 24px;}
+.next{width: 148px;padding: 6px;color: #6d1303;font-weight: bold;}
+.time_counter{float:right;font-weight:bold;}
+input[type=radio]{width: 2.5%;height: 18px;vertical-align: bottom;margin-top: 12px;}
+div{font-size:18px;}

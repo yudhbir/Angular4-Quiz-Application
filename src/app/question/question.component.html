@@ -1,0 +1,19 @@
+<div style="text-align:center;"><button (click)="start_quiz();" *ngIf="is_start" class="btn_start" >Start Quiz</button></div>
+<div *ngFor="let ques of question let rowIndex=index">	
+	<div *ngIf="question_index(rowIndex) && !is_start">
+		<p><b>Each Question have 2 minutes to Answer.</b><span class="time_counter">Time Completed: {{min}}:{{sec}}</span></p>
+		<div><b>Question {{rowIndex+1}} :</b> {{ques.question}}</div>
+		<div><b>Answer:</b> </div>
+		<div> 
+			<ul>
+				<li *ngFor="let sub of ques.subs">
+					<input type="radio" name="answer" value="{{sub}}" #answer (change)="next_go=answer.value">{{sub}}
+				</li> 
+			</ul>
+		</div>
+		<div> <input type="button" class="next" name="next_btn" value="Next" (click)="next_question(rowIndex,next_go)"> </div>
+	</div>
+</div>
+<div *ngIf="finish_message ?.length>0"class="finish">
+{{finish_message}}
+</div>
